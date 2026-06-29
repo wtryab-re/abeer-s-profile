@@ -197,7 +197,7 @@ export default function Work() {
               </div>
 
               {/* --- URL ACTION --- */}
-              <div className="flex justify-center md:justify-center mt-5">
+              <div className="flex justify-center md:justify-center mt-8">
                 <a
                   href={currentVid.instaUrl}
                   target="_blank"

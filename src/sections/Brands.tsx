@@ -87,17 +87,19 @@ export default function Brands() {
       <div className="max-w-6xl mx-auto">
         {/* --- Header Section --- */}
         <div className="text-(--font-color)">
-          <div className="flex flex-row justify-between items-center">
-            {" "}
+          <div className="flex flex-row items-center gap-5">
             {/* Added items-center for better vertical alignment */}
             <span className="text-xs sm:text-sm font-black tracking-widest uppercase">
               Brands I've Worked With:
             </span>
             <div
-              className="text-3xl mr-15 cursor-pointer hover:scale-120 border-1 transition-transform duration-300 rounded-full inline-flex items-center justify-center p-1"
+              className="cursor-pointer hover:scale-105 border transition-transform duration-300 rounded-full inline-flex items-center justify-center p-1 px-3 gap-1"
               onClick={handleNextBrand}
             >
-              <MdOutlineNavigateNext />
+              <p className="text-md leading-none">Click</p>
+              <div className="text-2xl flex items-center justify-center">
+                <MdOutlineNavigateNext />
+              </div>
             </div>
           </div>
 
@@ -140,7 +142,7 @@ export default function Brands() {
           {currentBrand.cards.map((card, index) => (
             <div
               key={`${currentIndex}-${index}`} // Composite key forces clean re-render mount for videos
-              className=" rounded-2xl w-80 shadow-md mb-5 hover:scale-105 transition-transform duration-300 cursor-pointer overflow-hidden"
+              className=" rounded-2xl w-80 shadow-md mb-5 hover:scale-115 transition-transform duration-300 cursor-pointer overflow-hidden"
               onClick={() => window.open(card.instaUrl, "_blank")}
             >
               <div className="w-full -mb-1 h-80 bg-(--font-color) overflow-hidden relative p-4 pb-0">
