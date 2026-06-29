@@ -8,7 +8,6 @@ import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 
 function App() {
-  const sections = ["home", "overview", "brands", "work", "contact"];
   return (
     <>
       <Header></Header>
