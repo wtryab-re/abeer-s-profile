@@ -134,7 +134,7 @@ export default function Work() {
                       Category
                     </p>
                     <p
-                      className={`text-sm font-bold uppercase break-words ${txtFade}`}
+                      className={`text-sm font-bold uppercase wrap-break-word ${txtFade}`}
                     >
                       {currentVid.category || "N/A"}
                     </p>
@@ -148,7 +148,9 @@ export default function Work() {
                     <p className="text-xs md:block hidden uppercase font-black opacity-60 tracking-wider">
                       Views
                     </p>
-                    <p className={`text-sm font-bold break-words ${txtFade}`}>
+                    <p
+                      className={`text-sm font-bold wrap-break-word ${txtFade}`}
+                    >
                       {currentVid.views || "0"}
                     </p>
                   </div>
@@ -161,7 +163,9 @@ export default function Work() {
                     <p className="text-xs md:block hidden uppercase font-black opacity-60 tracking-wider">
                       Likes
                     </p>
-                    <p className={`text-sm font-bold break-words ${txtFade}`}>
+                    <p
+                      className={`text-sm font-bold wrap-break-word ${txtFade}`}
+                    >
                       {currentVid.likes || "0"}
                     </p>
                   </div>
@@ -174,7 +178,9 @@ export default function Work() {
                     <p className="text-xs uppercase md:block hidden font-black opacity-60 tracking-wider">
                       reposts
                     </p>
-                    <p className={`text-sm font-bold break-words ${txtFade}`}>
+                    <p
+                      className={`text-sm font-bold wrap-break-word ${txtFade}`}
+                    >
                       {currentVid.reposts || "0"}
                     </p>
                   </div>
@@ -188,7 +194,7 @@ export default function Work() {
                     Strategy
                   </p>
                   <p
-                    className={`text-sm font-medium leading-relaxed break-words ${txtFade}`}
+                    className={`text-sm font-medium leading-relaxed wrap-break-word ${txtFade}`}
                   >
                     {currentVid.strategy ||
                       "No strategy description available."}

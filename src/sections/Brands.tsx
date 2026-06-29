@@ -107,7 +107,7 @@ export default function Brands() {
             <h2
               className={`text-4xl sm:text-6xl font-black tracking-tight shrink-0 transition-all duration-300 ease-in-out ${
                 fadeState === "fade-out"
-                  ? "opacity-0 transform translate-x-[-10px]"
+                  ? "opacity-0 transform translate-x-2.5"
                   : "opacity-100 transform translate-x-0"
               }`}
             >
