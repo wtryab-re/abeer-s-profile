@@ -16,17 +16,17 @@ export default function Account() {
       <div className="max-w-6xl mx-auto">
         {/* --- Header Section (Matches Brands Layout exactly) --- */}
         <div className="text-(--font-color)">
-          <span className="text-xs sm:text-sm font-black tracking-widest uppercase">
+          <span className="text-xs ml-2 sm:text-sm font-black tracking-widest uppercase">
             Account
           </span>
 
-          <div className="flex items-center gap-4 mt-1 mb-6">
+          <div className="flex items-center gap-4 mb-6">
             <h1 className="text-4xl sm:text-6xl font-black tracking-tight shrink-0">
               Overview
             </h1>
 
             <div className="grow flex items-center relative">
-              <div className="h-[3px] bg-(--font-color) w-full" />
+              <div className="h-0.75 bg-(--font-color) w-full" />
               <svg
                 className="absolute right-0 text-(--font-color) fill-current w-24 h-24 mt-[-0.5px] translate-x-4"
                 viewBox="0 0 24 24"

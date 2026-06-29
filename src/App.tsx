@@ -3,6 +3,7 @@ import Account from "./sections/Account";
 import Header from "./sections/Header";
 import Introduction from "./sections/Introduction";
 import Brands from "./sections/Brands";
+import Work from "./sections/Work";
 
 function App() {
   const sections = ["home", "overview", "brands", "work", "contact"];
@@ -22,8 +23,8 @@ function App() {
         <Brands></Brands>
       </div>
       <hr className="border-t mx-10 border-gray-300" />
-      <div id="work">
-        <div>section 1 - most popular sample work</div>
+      <div id="#work">
+        <Work></Work>
       </div>
       <hr className="border-t mx-10 border-gray-300" />
       <div id="contact">

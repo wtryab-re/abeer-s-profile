@@ -84,21 +84,21 @@ export default function Brands() {
       <div className="max-w-6xl mx-auto">
         {/* --- Header Section --- */}
         <div className="text-(--font-color)">
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-row justify-between items-center">
+            {" "}
+            {/* Added items-center for better vertical alignment */}
             <span className="text-xs sm:text-sm font-black tracking-widest uppercase">
               Brands I've Worked With:
             </span>
             <div
-              className="text-4xl mr-15 cursor-pointer hover:scale-120 border-1 transition-transform duration-300 rounded-full"
+              className="text-3xl mr-15 cursor-pointer hover:scale-120 border-1 transition-transform duration-300 rounded-full inline-flex items-center justify-center p-1"
               onClick={handleNextBrand}
-              style={{ cursor: "pointer" }}
             >
-              <MdOutlineNavigateNext></MdOutlineNavigateNext>
+              <MdOutlineNavigateNext />
             </div>
           </div>
 
           <div className="flex items-center gap-4 mt-1 mb-6">
-            {/* Smooth dynamic title transitions */}
             <h2
               className={`text-4xl sm:text-6xl font-black tracking-tight shrink-0 transition-all duration-300 ease-in-out ${
                 fadeState === "fade-out"
@@ -110,9 +110,10 @@ export default function Brands() {
             </h2>
 
             <div className="grow flex items-center relative">
-              <div className="h-[3px] bg-(--font-color) w-full" />
+              <div className="h-0.75 w-full bg-(--font-color)" />
 
-              <div className="absolute right-0 translate-x-4 flex flex-col items-center">
+              {/* FIXED: Added pointer-events-none so this wrapper box doesn't block mouse clicks on your arrow above */}
+              <div className="absolute right-0 translate-x-4 flex flex-col items-center pointer-events-none">
                 <svg
                   className="text-(--font-color) fill-current w-24 h-24 mt-[-0.5px]"
                   viewBox="0 0 24 24"
@@ -136,24 +137,22 @@ export default function Brands() {
           {currentBrand.cards.map((card, index) => (
             <div
               key={`${currentIndex}-${index}`} // Composite key forces clean re-render mount for videos
-              className="bg-(--font-color) text-white rounded-2xl w-80 shadow-lg mb-5 hover:scale-105 transition-transform duration-300 cursor-pointer overflow-hidden"
+              className=" rounded-2xl w-80 shadow-md mb-5 hover:scale-105 transition-transform duration-300 cursor-pointer overflow-hidden"
               onClick={() => window.open(card.instaUrl, "_blank")}
             >
-              <div className="w-full h-80 bg-neutral-900 overflow-hidden relative">
+              <div className="w-full -mb-1 h-80 bg-(--font-color) overflow-hidden relative p-4 pb-0">
                 <video
                   src={card.videoUrl}
                   autoPlay
                   playsInline
                   muted
                   loop
-                  className="w-full h-full object-cover"
+                  className="w-full h-full rounded-2xl object-cover"
                 />
               </div>
-              <div className="px-3 py-2 bg-(--font-color)">
-                <p className="text-md text-black opacity-70 font-bold">
-                  {card.views}
-                </p>
-                <p className="text-md font-bold text-white mt-1">
+              <div className="px-5 py-2 bg-(--font-color)">
+                <p className="text-md opacity-70 font-bold">{card.views}</p>
+                <p className="text-lg font-bold text-(--bg-color)">
                   {card.subtitle}
                 </p>
               </div>
