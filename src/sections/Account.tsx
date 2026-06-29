@@ -11,7 +11,10 @@ export default function Account() {
   const statsURL = ["/stats/stats_1.jpeg", "/stats/stats_2.jpeg"];
 
   return (
-    <section className="w-full min-h-screen bg-[#faf6f0] px-8 py-5 font-sans select-none">
+    <section
+      id="overview"
+      className="w-full min-h-screen bg-[#faf6f0] px-8 py-5 font-sans select-none"
+    >
       {/* Outer wrapper keeping the master layout wide to match the portfolio max-width */}
       <div className="max-w-6xl mx-auto">
         {/* --- Header Section (Matches Brands Layout exactly) --- */}

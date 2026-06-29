@@ -4,6 +4,8 @@ import Header from "./sections/Header";
 import Introduction from "./sections/Introduction";
 import Brands from "./sections/Brands";
 import Work from "./sections/Work";
+import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 
 function App() {
   const sections = ["home", "overview", "brands", "work", "contact"];
@@ -23,14 +25,15 @@ function App() {
         <Brands></Brands>
       </div>
       <hr className="border-t mx-10 border-gray-300" />
-      <div id="#work">
+      <div id="work">
         <Work></Work>
       </div>
       <hr className="border-t mx-10 border-gray-300" />
       <div id="contact">
-        <div>
-          contact me - linkedin, email, instagram, tiktok and a contact form
-        </div>
+        <Contact></Contact>
+      </div>
+      <div id="contact">
+        <Footer></Footer>
       </div>
     </>
   );

@@ -1,6 +1,6 @@
 export default function Introduction() {
   const description =
-    "a 20 y/o, Dubai raised creator, with an almost annoying ability to say exactly what everyone is thinking but nobody has put into words yet. The account is a proven engine for viral, highly shareable content targeting Gen Z";
+    "20 y/o, Dubai-raised creator, with the ability to say exactly what everyone is thinking but nobody has put into words yet. My account is a proven engine for viral, highly shareable content, targeting Gen Z";
 
   const imageUrl = "/pfp.jpeg";
   const account = "@chickunt3nders";
@@ -45,7 +45,10 @@ export default function Introduction() {
             </h1>
           </div>
 
-          <div className="pt-6 lg:pt-9 w-11/12 lg:w-3/4 text-lg lg:text-xl">
+          <div
+            className="pt-6 lg:pt-9 w-11/12 lg:w-3/4 text-lg lg:text-xl fon-ybol"
+            style={{ fontFamily: "serif" }}
+          >
             {description}
           </div>
         </div>

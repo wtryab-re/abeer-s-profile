@@ -80,7 +80,10 @@ export default function Brands() {
   };
 
   return (
-    <section className="w-full min-h-screen bg-[#faf6f0] px-8 py-5 font-sans select-none">
+    <section
+      id="brands"
+      className="w-full min-h-screen bg-[#faf6f0] px-8 py-5 font-sans select-none"
+    >
       <div className="max-w-6xl mx-auto">
         {/* --- Header Section --- */}
         <div className="text-(--font-color)">
@@ -152,7 +155,10 @@ export default function Brands() {
               </div>
               <div className="px-5 py-2 bg-(--font-color)">
                 <p className="text-md opacity-70 font-bold">{card.views}</p>
-                <p className="text-lg font-bold text-(--bg-color)">
+                <p
+                  className="text-lg font-bold text-(--bg-color)"
+                  style={{ fontFamily: "sans-serif" }}
+                >
                   {card.subtitle}
                 </p>
               </div>
