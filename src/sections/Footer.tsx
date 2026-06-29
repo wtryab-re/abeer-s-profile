@@ -4,6 +4,7 @@ import {
   FaTiktok,
   FaThreads,
 } from "react-icons/fa6";
+import { IoDocumentTextOutline } from "react-icons/io5";
 
 export default function Footer() {
   const makerUrl = "https://linkedin.com/in/warda-tayyeb";
@@ -22,6 +23,11 @@ export default function Footer() {
       label: "TikTok",
       icon: <FaTiktok />,
       url: "https://www.tiktok.com/@chickunt3nderss",
+    },
+    {
+      label: "Media Kit",
+      icon: <IoDocumentTextOutline />,
+      url: "https://drive.google.com/file/d/1B5TIRP0F3AjiTeGSQCp5MvhEfk-ZPLwy/view?usp=sharing",
     },
     {
       label: "Threads",

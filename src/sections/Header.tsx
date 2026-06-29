@@ -1,6 +1,7 @@
 export default function Header() {
-  const sections = ["home", "overview", "brands", "work", "contact"];
-
+  const sections = ["home", "overview", "brands", "work", "prices", "contact"];
+  const drive =
+    "https://drive.google.com/file/d/1B5TIRP0F3AjiTeGSQCp5MvhEfk-ZPLwy/view?usp=sharing";
   return (
     <header className="flex flex-col py-4 pt-3 fixed top-0 left-0 right-0 z-50">
       <ul className="flex justify-center space-x-4 text-sm text-gray-600 bg-(--font-color)/10 backdrop-blur-xs font-serif rounded-3xl w-fit mx-auto px-4 py-2">
@@ -13,6 +14,9 @@ export default function Header() {
               href={`#${section}`}
               onClick={(e) => {
                 e.preventDefault();
+                if (section == "prices") {
+                  window.open(drive, "_blank");
+                }
                 document
                   .getElementById(section)
                   ?.scrollIntoView({ behavior: "smooth" });

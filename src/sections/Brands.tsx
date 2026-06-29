@@ -142,7 +142,7 @@ export default function Brands() {
           {currentBrand.cards.map((card, index) => (
             <div
               key={`${currentIndex}-${index}`} // Composite key forces clean re-render mount for videos
-              className=" rounded-2xl w-80 shadow-md mb-5 hover:scale-115 transition-transform duration-300 cursor-pointer overflow-hidden"
+              className=" rounded-2xl w-80 shadow-md mb-5 hover:scale-105 transition-transform duration-300 cursor-pointer overflow-hidden"
               onClick={() => window.open(card.instaUrl, "_blank")}
             >
               <div className="w-full -mb-1 h-80 bg-(--font-color) overflow-hidden relative p-4 pb-0">
