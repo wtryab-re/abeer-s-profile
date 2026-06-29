@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { MdOutlineNavigateNext } from "react-icons/md";
 
 export default function Brands() {

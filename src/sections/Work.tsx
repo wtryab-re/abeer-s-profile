@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { MdOutlineCategory, MdOutlineRemoveRedEye } from "react-icons/md";
 import { FaRegHeart, FaInstagram } from "react-icons/fa6";
 import { BiRepost } from "react-icons/bi";

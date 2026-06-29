@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Account() {
   const contentPillars = [
     "relatable gen Z humor",
