@@ -29,7 +29,7 @@ export default function Account() {
             <div className="grow flex items-center relative">
               <div className="h-0.75 bg-(--font-color) w-full" />
               <svg
-                className="absolute right-0 text-(--font-color) fill-current w-24 h-24 mt-[-0.5px] translate-x-4"
+                className="absolute right-0 text-(--font-color)  hidden sm:block  fill-current w-24 h-24 mt-[-0.5px] translate-x-4"
                 viewBox="0 0 24 24"
               >
                 <path d="M12 0c.5 6.5 5.5 11.5 12 12-6.5.5-11.5 5.5-12 12-.5-6.5-5.5-11.5-12-12 6.5-.5 11.5-5.5 12-12z" />

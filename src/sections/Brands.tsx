@@ -120,7 +120,7 @@ export default function Brands() {
               {/* FIXED: Added pointer-events-none so this wrapper box doesn't block mouse clicks on your arrow above */}
               <div className="absolute right-0 translate-x-4 flex flex-col items-center pointer-events-none">
                 <svg
-                  className="text-(--font-color) fill-current w-24 h-24 mt-[-0.5px]"
+                  className="text-(--font-color) fill-current w-24 h-24 mt-[-0.5px]  hidden sm:block "
                   viewBox="0 0 24 24"
                 >
                   <path d="M12 0c.5 6.5 5.5 11.5 12 12-6.5.5-11.5 5.5-12 12-.5-6.5-5.5-11.5-12-12 6.5-.5 11.5-5.5 12-12z" />
