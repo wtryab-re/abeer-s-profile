@@ -2,6 +2,7 @@ import "./App.css";
 import Account from "./sections/Account";
 import Header from "./sections/Header";
 import Introduction from "./sections/Introduction";
+import Brands from "./sections/Brands";
 
 function App() {
   const sections = ["home", "overview", "brands", "work", "contact"];
@@ -15,12 +16,16 @@ function App() {
       <div id="overview">
         <Account></Account>
       </div>
+
+      <hr className="border-t mx-10 border-gray-300" />
       <div id="brands">
-        <div>section 1 - brands I've worked with</div>
+        <Brands></Brands>
       </div>
+      <hr className="border-t mx-10 border-gray-300" />
       <div id="work">
         <div>section 1 - most popular sample work</div>
       </div>
+      <hr className="border-t mx-10 border-gray-300" />
       <div id="contact">
         <div>
           contact me - linkedin, email, instagram, tiktok and a contact form
