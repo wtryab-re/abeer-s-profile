@@ -9,7 +9,7 @@ export default function Introduction() {
   return (
     <>
       {/* Changed flex switching, heights, gaps, and padding rules from md: to lg: to prevent layout crushing */}
-      <div className="w-full min-h-screen lg:h-screen flex flex-col-reverse pt-20 lg:flex-row items-center justify-center font-sans select-none gap-10 lg:gap-0 flex-wrap py-10 lg:py-0">
+      <div className="w-full min-h-screen bg-(--bg-color) lg:h-screen flex flex-col-reverse pt-20 lg:flex-row items-center justify-center font-sans select-none gap-10 lg:gap-0 flex-wrap py-10 lg:py-0">
         {/* Left Column: Kept completely intact, just deferred the negative margin and width adjustments until lg */}
         <div className="w-full lg:w-1/2 lg:-ml-50 text-center flex justify-center relative">
           <div className="relative">

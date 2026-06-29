@@ -1,4 +1,5 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { FaPaperPlane, FaUser, FaEnvelope, FaMessage } from "react-icons/fa6";
 
 export default function Contact() {
@@ -8,7 +9,38 @@ export default function Contact() {
     message: "",
   });
 
-  const handleChange = (e: { target: { name: any; value: any } }) => {
+  const [isSending, setisSending] = useState(false);
+
+  const encode = (data: Record<string, string>) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]),
+      )
+      .join("&");
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setisSending(true);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...formData }),
+    })
+      .then(() => {
+        toast.success("Message Sent Successfully!");
+        setFormData({ name: "", email: "", message: "" });
+        setisSending(false);
+      })
+      .catch(() => {
+        toast.error("Message unable to send. Try Again Later");
+        setisSending(false);
+      });
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -40,14 +72,14 @@ export default function Contact() {
             </div>
           </div>
         </div>
-
-        {/* --- NETLIFY-COMPATIBLE CONTACT FORM --- */}
       </div>
+
       {/* --- NETLIFY-COMPATIBLE CONTACT FORM --- */}
       <div className="bg-(--font-color)/10 rounded-3xl p-6   border border-pink-100 max-w-2xl mx-auto my-8">
         <form
           name="contact"
           method="POST"
+          onSubmit={handleSubmit}
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           className="space-y-6"
@@ -123,10 +155,11 @@ export default function Contact() {
           <div className=" flex justify-center">
             <button
               type="submit"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-(--font-color) text-(--bg-color) font-black text-xs uppercase tracking-widest px-8 py-4 rounded-2xl hover:bg-(--lighter-font-color) active:scale-98 transition-all duration-300 shadow-lg shadow-pink-500/20 cursor-pointer"
+              disabled={isSending}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-(--font-color) text-(--bg-color) font-black text-xs uppercase tracking-widest px-8 py-4 rounded-2xl hover:bg-(--lighter-font-color) active:scale-98 transition-all duration-300 shadow-lg shadow-pink-500/20 cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
             >
               <FaPaperPlane className="text-sm" />
-              Send Message
+              {isSending ? "Sending..." : "Send Message"}
             </button>
           </div>
         </form>

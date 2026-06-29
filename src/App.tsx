@@ -6,10 +6,12 @@ import Brands from "./sections/Brands";
 import Work from "./sections/Work";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <>
+      <Toaster position="top-right"></Toaster>
       <Header></Header>
       <div id="home">
         <Introduction></Introduction>
