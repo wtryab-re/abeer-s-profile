@@ -91,13 +91,14 @@ export default function Work() {
               className={`absolute inset-0 p-1 z-10 bg-black transition-all duration-400 ease-[cubic-bezier(0.25,1,0.5,1)] ${fadeState}`}
             >
               <video
+                onClick={() => window.open(currentVid.instaUrl, "_blank")}
                 key={currentIndex}
                 src={currentVid.vidPath}
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="rounded-4xl border border-transparent w-full h-full object-cover"
+                className="cursor-pointer rounded-4xl border border-transparent w-full h-full object-cover"
               />
             </div>
           </div>
