@@ -31,6 +31,118 @@
     </style>
   </head>
   <body>
+    <!-- PURE HTML & CSS DAISY LOADER (Loads instantly before React) -->
+    <div
+      id="app-loading-screen"
+      style="
+        transition: all 1s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+      "
+    >
+      <!-- CSS Animations Declaration Wrapper -->
+      <style>
+        @keyframes daisyFade {
+          0% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0.1;
+          }
+        }
+        @keyframes daisySpin {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+        .pure-spin-container {
+          position: relative;
+          width: 96px; /* 24rem -> 96px */
+          height: 96px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          animation: daisySpin 4s linear infinite;
+        }
+        .pure-center-dot {
+          width: 16px; /* 4rem -> 16px */
+          height: 16px;
+          background-color: #f59e0b; /* amber-500 */
+          border-radius: 50%;
+          z-index: 10;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+        .pure-petal {
+          position: absolute;
+          width: 14px;
+          height: 28px;
+          background-color: #ffffff;
+          opacity: 0.1;
+          border: 1px solid #000000;
+          border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+          transform-origin: center 42px;
+          top: 6px; /* 48px - 42px offset */
+          animation: daisyFade 1.4s linear infinite;
+        }
+      </style>
+
+      <!-- Daisy Loading Graphic Framework -->
+      <div class="pure-spin-container">
+        <div class="pure-center-dot"></div>
+
+        <!-- Petal 1 (Rot: 0° | Delay: 0s) -->
+        <div
+          class="pure-petal"
+          style="transform: rotate(0deg); animation-delay: 0s"
+        ></div>
+
+        <!-- Petal 2 (Rot: 51.42° | Delay: 0.2s) -->
+        <div
+          class="pure-petal"
+          style="transform: rotate(51.42deg); animation-delay: 0.2s"
+        ></div>
+
+        <!-- Petal 3 (Rot: 102.85° | Delay: 0.4s) -->
+        <div
+          class="pure-petal"
+          style="transform: rotate(102.85deg); animation-delay: 0.4s"
+        ></div>
+
+        <!-- Petal 4 (Rot: 154.28° | Delay: 0.6s) -->
+        <div
+          class="pure-petal"
+          style="transform: rotate(154.28deg); animation-delay: 0.6s"
+        ></div>
+
+        <!-- Petal 5 (Rot: 205.71° | Delay: 0.8s) -->
+        <div
+          class="pure-petal"
+          style="transform: rotate(205.71deg); animation-delay: 0.8s"
+        ></div>
+
+        <!-- Petal 6 (Rot: 257.14° | Delay: 1.0s) -->
+        <div
+          class="pure-petal"
+          style="transform: rotate(257.14deg); animation-delay: 1s"
+        ></div>
+
+        <!-- Petal 7 (Rot: 308.57° | Delay: 1.2s) -->
+        <div
+          class="pure-petal"
+          style="transform: rotate(308.57deg); animation-delay: 1.2s"
+        ></div>
+      </div>
+    </div>
     <div id="root"></div>
     <form name="contact" data-netlify="true" hidden>
       <input type="text" name="name" required />
